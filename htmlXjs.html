@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Function library example</title>
+  <style>
+    input {
+      font-size: 2em;
+      margin: 10px 1px 0;
+    }
+  </style>
+  </head>
+<body>
+
+  <input class="numberInput" type="text">
+  <p></p>
+
+  <script>
+    const input = document.querySelector('.numberInput');
+    const para = document.querySelector('p');
+
+    function square(num){
+      return num*num
+    }
+    function cube(num){
+      return num*num*num
+    }
+
+
+    function factorial(num) {
+    let fact = 1;  // Initialize fact to 1 (as factorial of 0 is 1)
+    
+    // Check if the number is 0 or 1 
+    if (num === 0 || num === 1) {
+        return 1;
+    }
+    while (num > 1) {
+        fact *= num;  
+        num -= 1;  
+    }
+
+    return fact; 
+}
+
+n = +prompt("Enter any number : ");
+console.log(`Square of the number ${n} is ${square(n)}`)
+console.log(`Cube of the number ${n} is ${cube(n)}`)
+console.log(`Factorial of the number ${n} is ${factorial(n)}`)
+
+    
+  </script>
+</body>
+</html>
